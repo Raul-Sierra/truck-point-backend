@@ -20,6 +20,7 @@
   "license": "ISC",
   "description": "API REST per a l'aplicació Truck Point, dissenyada per gestionar els punts d'interès i parades de camions.",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "express-validator": "^7.2.1",

@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const truckPointRoutes = require('./src/routes/truckPoint.routes.js');
 const connectDB = require('./src/config/database.js');
 const { errorHandler } = require('./src/middleware/errorHandler.js');
+const cors = require('cors');
 
 
 // Load environment variables from .env file
@@ -13,6 +14,9 @@ connectDB();
 
 const app = express();
 
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Middleware to parse JSON bodies
 app.use(express.json());
