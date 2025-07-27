@@ -10,7 +10,7 @@ const createTruckPoint = async (req, res) => {
         const savedTruckPoint = await truckPoint.save();
         res.status(201).send(savedTruckPoint);
     } catch (error) {
-        res.status(400).json({ message: 'Error al crear el TruckPoint', error: error.message });
+        res.status(400).json({ message: 'Error en crear el TruckPoint', error: error.message });
     }
 };
 
@@ -21,7 +21,7 @@ const getAllTruckPoints = async (req, res) => {
         const truckPoints = await TruckPoint.find();
         res.status(200).json(truckPoints);
     } catch (error) {
-        res.status(500).json({ message: 'Error al obtenir els TruckPoints', error: error.message });
+        res.status(500).json({ message: 'Error en obtenir els TruckPoints', error: error.message });
     }
 };
 

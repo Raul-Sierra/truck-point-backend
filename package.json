@@ -7,10 +7,10 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["api-rest", "express", "mongoose", "nodejs", "truck-point", "backend", "logistics"],
+  "author": "Raül Sierra Arbiol",
   "license": "ISC",
-  "description": "",
+  "description": "API REST per a l'aplicació Truck Point, dissenyada per gestionar els punts d'inrerès i parades de camions",
   "dependencies": {
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
