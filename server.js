@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const truckPointRoutes = require('./src/routes/truckPoint.routes.js');
 const connectDB = require('./src/config/database.js');
-
+const { errorHandler } = require('./src/middleware/errorHandler.js');
 
 
 // Load environment variables from .env file
@@ -24,6 +24,9 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use('/api/truck-points', truckPointRoutes);
+
+// Error Handling Middleware
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
